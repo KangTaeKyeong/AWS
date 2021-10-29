@@ -4,7 +4,7 @@ resource "aws_lb_listener" "sdkim_lblist" {
   protocol                = "HTTP"
 
   default_action {
-    type                = "forward"
-    target_group_arn    = aws_lb_target_group.sdkim_lbtg.arn  
+    type                  = "forward"
+    target_group_arn      = aws_lb_target_group.sdkim_lbtg.arn  
   }
 }
