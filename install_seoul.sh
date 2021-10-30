@@ -1,5 +1,7 @@
-#!/bin/bash
-yum install -y http://rpms.remirepo.net/enterprise/remi-release-7.rpm
+#!/bin/basha
+sudo su -
+amazon-linux-extras install epel
+yum install -y https://rpms.remirepo.net/enterprise/remi-release-7.rpm
 yum install -y yum-utils wget httpd
 amazon-linux-extras install -y lamp-mariadb10.2-php7.2 php7.2
 wget https://ko.wordpress.org/latest-ko_KR.tar.gz
