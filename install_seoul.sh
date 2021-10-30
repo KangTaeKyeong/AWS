@@ -1,9 +1,9 @@
-#!/bin/basha
+#!/bin/bash
 sudo su -
-amazon-linux-extras install epel
-yum install -y https://rpms.remirepo.net/enterprise/remi-release-7.rpm
-yum install -y yum-utils wget httpd
-amazon-linux-extras install -y lamp-mariadb10.2-php7.2 php7.2
+yum install -y wget httpd
+amazon-linux-extras enable php7.2
+amazon-linux-extras enable lamp-mariadb10.2-php7.2
+yum install -y php-cli php-pdo php-fpm php-json php-mysqlnd mariadb php
 wget https://ko.wordpress.org/latest-ko_KR.tar.gz
 tar xvfz latest-ko_KR.tar.gz
 cp -a wordpress/* /var/www/html/
