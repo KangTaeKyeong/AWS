@@ -4,7 +4,7 @@ resource "aws_launch_configuration" "sdkim_lacf" {
   instance_type        = "t2.micro"
   iam_instance_profile = "admin_role"
   security_groups      = [aws_security_group.sdkim_websg.id]
-  key_name             = "tf-key"
+  key_name             = "sdkim-key"
   user_data            =<<-EOF
                         #!/bin/bash
                         systemctl start httpd
