@@ -39,3 +39,21 @@ resource "aws_subnet" "sdkim_pric" {
     Name = "sdkim-pric"
   }
 }
+  resource "aws_subnet" "sdkim_pridba" {
+  vpc_id            = aws_vpc.sdkim_vpc.id
+  cidr_block        = "10.0.4.0/24"
+  availability_zone = "ap-northeast-2a"
+
+  tags = {
+    Name = "sdkim-pridba"
+  }
+}
+resource "aws_subnet" "sdkim_pridbc" {
+  vpc_id            = aws_vpc.sdkim_vpc.id
+  cidr_block        = "10.0.5.0/24"
+  availability_zone = "ap-northeast-2c"
+
+  tags = {
+    Name = "sdkim-pridbc"
+  }
+}
