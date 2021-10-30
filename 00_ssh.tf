@@ -1,4 +1,4 @@
 resource "aws_key_pair" "sdkim_key" {
-  key_name        ="tf-key1"
-  public_key      = file("../../.ssh/id_rsa.pub")  
+  key_name        ="sdkim-key"
+  public_key      = file("../../.ssh/sdkim_key.pub")  
 }
