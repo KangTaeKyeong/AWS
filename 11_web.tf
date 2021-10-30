@@ -17,12 +17,12 @@ data "aws_ami" "amzn" {
 resource "aws_instance" "sdkim_weba" {
   ami                    = data.aws_ami.amzn.id
   instance_type          = "t2.micro"
-  key_name               = "tf-key"
+  key_name               = "sdkim-key"
   vpc_security_group_ids = [aws_security_group.sdkim_websg.id]
   availability_zone      = "ap-northeast-2a"
   private_ip             = "10.0.0.11"
   subnet_id              = aws_subnet.sdkim_puba.id
-  user_data              =  file("./install_seoul.sh") 
+  user_data              =  file("install_seoul.sh") 
 
   tags = {
     Name = "sdkim-weba"
